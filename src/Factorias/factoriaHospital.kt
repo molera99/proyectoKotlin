@@ -6,7 +6,7 @@ import Pacientes
 object factoriaHospital {
     fun crearHospital():Hospital{
         var listaPacientes=ArrayList<Pacientes>()
-        var hospital=Hospital(listaPacientes)
+        var hospital=Hospital.Builder().pacientes(listaPacientes).build()
         return hospital
     }
 }

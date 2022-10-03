@@ -22,7 +22,7 @@ object FactoriaMedicos {
         var nombre=nombres[eleccion]
         var especialidades= arrayOf("Traumatologia","Medicina interna")
         var especialidad=especialidades[tipoEspecialidad]
-        var medico=Medico(especialidad,NIDI,nombre, compañiaSeguros)
+        var medico=Medico.Builder().NIDI(NIDI).nombre(nombre).especialidad(especialidad).compañiaSeguros(compañiaSeguros).build()
         return medico
     }
 

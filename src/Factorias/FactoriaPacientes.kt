@@ -20,7 +20,7 @@ object FactoriaPacientes {
         var prioridades= arrayOf(1,2,3)
         eleccion= Random.nextInt(0,3)
         var prioridad=prioridades[eleccion]
-        var paciente=Pacientes(atencionRequerida,prioridad,NIDI,nombre,compañiaSeguros)
+        var paciente=Pacientes.Builder().NIDI(NIDI).nombre(nombre).compañiaSeguros(compañiaSeguros).atencionRequerida(atencionRequerida).prioridad(prioridad).build()
         return paciente
     }
 }

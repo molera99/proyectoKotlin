@@ -80,9 +80,9 @@ fun main(){
 fun informe(paciente:Pacientes,medico:Medico,sistema:Sistema,eleccionTurno:Int,dia:Int):String{
 
     return "El paciente $paciente ha sido atentido por el medico $medico" +
-            " en el turno ${sistema.turno[eleccionTurno]} en el dia $dia"
+            " en el turno ${sistema.turno?.get(eleccionTurno)} en el dia $dia"
 }
 fun informeHospital(paciente: Pacientes,eleccionTurno:Int,dia:Int,sistema:Sistema):String{
 
-    return "El paciente $paciente ha sido mandado al hospital en el turno ${sistema.turno[eleccionTurno]} en el dia $dia"
+    return "El paciente $paciente ha sido mandado al hospital en el turno ${sistema.turno?.get(eleccionTurno)} en el dia $dia"
 }

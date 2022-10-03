@@ -1,6 +1,6 @@
 class SalaEspera(var pacientes:ArrayList<Pacientes>) {
     fun ordenarPacientes(): ArrayList<Pacientes> {
-        var pacientesOrdenados=pacientes.sortedBy { it.prioridad }
+        var pacientesOrdenados=pacientes?.sortedBy { it.prioridad }
         pacientes=ArrayList(pacientesOrdenados)
         return pacientes
     }
@@ -8,5 +8,6 @@ class SalaEspera(var pacientes:ArrayList<Pacientes>) {
     override fun toString(): String {
         return "SalaEspera(pacientes=$pacientes)"
     }
+
 
 }

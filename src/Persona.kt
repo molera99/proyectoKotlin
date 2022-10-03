@@ -1,4 +1,4 @@
-open abstract class Persona(var NIDI:Int, var nombre:String) {
+open abstract class Persona(var NIDI:Int?=null, var nombre:String?=null) {
 
     companion object{
         var identificacion=0
