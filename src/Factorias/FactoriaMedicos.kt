@@ -5,18 +5,23 @@ import Persona.Companion.identificacion
 import kotlin.random.Random
 
 object FactoriaMedicos {
-    fun crearMedico():Medico{
+    fun crearMedico(tipoEspecialidad:Int):Medico{
         var NIDI= identificacion
         identificacion++
         var compañias= arrayOf("Sanitroopers", "Vaderslas","Yodacare")
         var eleccion= Random.nextInt(0,3)
-        var compañiaSeguros=compañias[eleccion]
+        var compañia1=compañias[eleccion]
+        eleccion= Random.nextInt(0,3)
+        while(compañia1==compañias[eleccion]) {
+            eleccion= Random.nextInt(0,3)
+        }
+        var compañia2=compañias[eleccion]
+        var compañiaSeguros= arrayOf(compañia1,compañia2)
         var nombres= arrayOf("Juan","Carlos","David","Miguel","Arturo","Maria","Clara")
         eleccion= Random.nextInt(0,7)
         var nombre=nombres[eleccion]
         var especialidades= arrayOf("Traumatologia","Medicina interna")
-        eleccion= Random.nextInt(0,2)
-        var especialidad=especialidades[eleccion]
+        var especialidad=especialidades[tipoEspecialidad]
         var medico=Medico(especialidad,NIDI,nombre, compañiaSeguros)
         return medico
     }
